@@ -1,6 +1,8 @@
 package optimizer;
 
 public class Deque {
+    // Circular Array-based Double Ended Queue (Deque)
+// Supports insertion and deletion from both front and rear
 
     private int[] data;
     private int front;
