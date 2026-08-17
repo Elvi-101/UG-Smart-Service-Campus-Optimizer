@@ -4,6 +4,11 @@ target/
 # Java
 *.class
 
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
 # VS Code
 .vscode/
 
