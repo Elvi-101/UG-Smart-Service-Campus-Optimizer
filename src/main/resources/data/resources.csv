@@ -1,0 +1,21 @@
+resourceId,resourceName,resourceType,locationId,availability,status
+1,Electrical Team A,Electrical,4,AVAILABLE,ACTIVE
+2,Electrical Team B,Electrical,9,AVAILABLE,ACTIVE
+3,Plumbing Team A,Plumbing,5,AVAILABLE,ACTIVE
+4,Plumbing Team B,Plumbing,10,AVAILABLE,ACTIVE
+5,Maintenance Team A,Maintenance,1,AVAILABLE,ACTIVE
+6,Maintenance Team B,Maintenance,16,BUSY,ACTIVE
+7,Cleaning Team A,Cleaning,2,AVAILABLE,ACTIVE
+8,Cleaning Team B,Cleaning,12,AVAILABLE,ACTIVE
+9,Security Team A,Security,3,AVAILABLE,ACTIVE
+10,Security Team B,Security,8,BUSY,ACTIVE
+11,Electrical Team C,Electrical,14,AVAILABLE,ACTIVE
+12,Plumbing Team C,Plumbing,15,AVAILABLE,ACTIVE
+13,Maintenance Team C,Maintenance,20,AVAILABLE,ACTIVE
+14,Cleaning Team C,Cleaning,21,AVAILABLE,ACTIVE
+15,Security Team C,Security,23,AVAILABLE,ACTIVE
+16,Electrical Team D,Electrical,25,AVAILABLE,ACTIVE
+17,Plumbing Team D,Plumbing,26,AVAILABLE,ACTIVE
+18,Maintenance Team D,Maintenance,27,BUSY,ACTIVE
+19,Cleaning Team D,Cleaning,29,AVAILABLE,ACTIVE
+20,Security Team D,Security,30,AVAILABLE,ACTIVE
