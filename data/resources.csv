@@ -19,3 +19,13 @@ resourceId,resourceName,resourceType,locationId,availability,status
 18,Maintenance Team D,Maintenance,27,BUSY,ACTIVE
 19,Cleaning Team D,Cleaning,29,AVAILABLE,ACTIVE
 20,Security Team D,Security,30,AVAILABLE,ACTIVE
+21,IT Support Team A,IT Support,6,AVAILABLE,ACTIVE
+22,IT Support Team B,IT Support,18,BUSY,ACTIVE
+23,Waste Collection Team A,Waste Collection,11,AVAILABLE,ACTIVE
+24,Waste Collection Team B,Waste Collection,33,AVAILABLE,ACTIVE
+25,Water Supply Team A,Water Supply,7,AVAILABLE,ACTIVE
+26,Water Supply Team B,Water Supply,41,BUSY,ACTIVE
+27,Electrical Team E,Electrical,37,AVAILABLE,ACTIVE
+28,Plumbing Team E,Plumbing,44,AVAILABLE,ACTIVE
+29,Maintenance Team E,Maintenance,48,AVAILABLE,ACTIVE
+30,Security Team E,Security,50,AVAILABLE,ACTIVE
