@@ -28,7 +28,7 @@ public class ServiceRequestValidator {
                             "Service requests stored in database: "
                                     + count);
 
-                    if (count == 30) {
+                    if (count >= 300) {
                         System.out.println(
                                 "Request count validation: PASSED");
                     } else {

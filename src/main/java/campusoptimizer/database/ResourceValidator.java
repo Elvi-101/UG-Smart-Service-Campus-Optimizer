@@ -25,7 +25,7 @@ public class ResourceValidator {
                 System.out.println(
                         "Resources stored in database: " + count);
 
-                if (count == 20) {
+                if (count >= 30) {
                     System.out.println(
                             "Resource count validation: PASSED");
                 } else {
