@@ -36,4 +36,20 @@
 
     </dependencies>
 
+    <build>
+        <plugins>
+
+            <!-- Run the application with Maven dependencies -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <mainClass>campusoptimizer.Main</mainClass>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
 </project>
