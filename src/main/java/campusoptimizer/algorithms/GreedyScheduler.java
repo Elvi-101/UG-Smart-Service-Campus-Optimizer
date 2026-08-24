@@ -18,7 +18,7 @@ public class GreedyScheduler<T> {
     /**
      * Creates a greedy scheduler using the given priority comparator.
      */
-    public GreedyScheduler(Comparator<T> comparator) {
+    public GreedyScheduler(Comparator<? super T> comparator) {
         heap = new Heap<>(comparator);
     }
 

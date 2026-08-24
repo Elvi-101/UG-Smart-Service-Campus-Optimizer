@@ -15,14 +15,14 @@ import java.util.NoSuchElementException;
 public class Heap<T> {
 
     private final DynamicArray<T> data;
-    private final Comparator<T> comparator;
+    private final Comparator<? super T> comparator;
 
     /**
      * Creates a heap using the provided comparator.
      *
      * The comparator determines which element has higher priority.
      */
-    public Heap(Comparator<T> comparator) {
+    public Heap(Comparator<? super T> comparator) {
         if (comparator == null) {
             throw new IllegalArgumentException("Comparator cannot be null");
         }
