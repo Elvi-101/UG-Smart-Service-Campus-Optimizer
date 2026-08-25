@@ -1,10 +1,11 @@
+package campusoptimizer;
+
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 
 class BFSTest {
 
@@ -16,7 +17,6 @@ class BFSTest {
         g.addRoute("Cafeteria", "Clinic", 2);
         return g;
     }
-
 
     @Test
     void traverse_singleLocationNoRoutes() {
@@ -70,7 +70,6 @@ class BFSTest {
         assertEquals(List.of("A", "B"), result);
     }
 
-
     @Test
     void traverse_startLocationNotInGraphThrows() {
         Graph g = new Graph();
@@ -85,12 +84,11 @@ class BFSTest {
         assertThrows(NoSuchElementException.class, () -> BFS.traverse(g, "Anything"));
     }
 
-
     @Test
     void traverse_onDisconnectedGraphOnlyReachesOwnComponent() {
         Graph g = new Graph();
         g.addRoute("Library", "Cafeteria", 3); // component 1
-        g.addLocation("IsolatedShed");          // component 2, no routes
+        g.addLocation("IsolatedShed"); // component 2, no routes
 
         List<String> result = BFS.traverse(g, "Library");
         assertEquals(2, result.size());
@@ -101,8 +99,8 @@ class BFSTest {
     void traverseAll_coversEveryComponent() {
         Graph g = new Graph();
         g.addRoute("Library", "Cafeteria", 3); // component 1
-        g.addRoute("Hostel", "Gym", 4);         // component 2
-        g.addLocation("IsolatedShed");          // component 3
+        g.addRoute("Hostel", "Gym", 4); // component 2
+        g.addLocation("IsolatedShed"); // component 3
 
         List<List<String>> components = BFS.traverseAll(g);
 
@@ -110,7 +108,6 @@ class BFSTest {
         int totalLocations = components.stream().mapToInt(List::size).sum();
         assertEquals(5, totalLocations);
     }
-
 
     @Test
     void shortestPathByHops_findsFewestHopsNotLowestWeight() {

@@ -1,3 +1,5 @@
+package campusoptimizer;
+
 import java.util.Random;
 
 /**

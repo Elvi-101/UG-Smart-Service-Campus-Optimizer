@@ -1,3 +1,5 @@
+package campusoptimizer;
+
 import java.util.List;
 import java.util.Map;
 
@@ -27,7 +29,8 @@ public class DijkstraTest {
         Graph g = buildCampusGraph();
         Dijkstra.Result result = Dijkstra.run(g, "MainGate");
 
-        // MainGate -> Library (5) -> Cafeteria (3) = 8, cheaper than MainGate -> Hostel -> Cafeteria (14)
+        // MainGate -> Library (5) -> Cafeteria (3) = 8, cheaper than MainGate -> Hostel
+        // -> Cafeteria (14)
         assertEquals(0, result.distances.get("MainGate"), "distance to source should be 0");
         assertEquals(5, result.distances.get("Library"), "MainGate->Library");
         assertEquals(10, result.distances.get("Hostel"), "MainGate->Hostel");
@@ -56,7 +59,8 @@ public class DijkstraTest {
 
         Dijkstra.Result result = Dijkstra.run(g, "MainGate");
 
-        assertEquals(Dijkstra.UNREACHABLE, result.distances.get("IsolatedAnnex"), "isolated location should be unreachable");
+        assertEquals(Dijkstra.UNREACHABLE, result.distances.get("IsolatedAnnex"),
+                "isolated location should be unreachable");
         List<String> path = result.reconstructPath("IsolatedAnnex");
         assertTrue(path.isEmpty(), "path to unreachable location should be empty");
 

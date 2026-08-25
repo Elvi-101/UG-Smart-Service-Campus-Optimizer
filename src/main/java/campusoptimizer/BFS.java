@@ -1,3 +1,5 @@
+package campusoptimizer;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -9,7 +11,8 @@ import java.util.Set;
 public class BFS {
 
     /**
-     * Performs a breadth-first search traversal of the graph starting from the specified location.
+     * Performs a breadth-first search traversal of the graph starting from the
+     * specified location.
      *
      * @param graph the campus graph
      * @param start the location to begin traversal from
@@ -35,8 +38,8 @@ public class BFS {
             for (Graph.Edge edge : graph.getNeighbors(current)) {
                 String neighbor = edge.destination; // weight is ignored by BFS
                 if (!visited.contains(neighbor)) {
-                    visited.add(neighbor);   // mark visited at ENQUEUE time,
-                    queue.offer(neighbor);   // not at dequeue — prevents duplicate enqueues
+                    visited.add(neighbor); // mark visited at ENQUEUE time,
+                    queue.offer(neighbor); // not at dequeue — prevents duplicate enqueues
                 }
             }
         }
@@ -46,7 +49,8 @@ public class BFS {
 
     /**
      * Traverses all connected components of the graph, returning a list of lists.
-     * Each inner list contains the locations in one connected component, in the order they were visited.
+     * Each inner list contains the locations in one connected component, in the
+     * order they were visited.
      */
     public static List<List<String>> traverseAll(Graph graph) {
         List<List<String>> components = new ArrayList<>();
@@ -62,7 +66,6 @@ public class BFS {
 
         return components;
     }
-
 
     public static List<String> shortestPathByHops(Graph graph, String start, String target) {
         if (!graph.hasLocation(start) || !graph.hasLocation(target)) {

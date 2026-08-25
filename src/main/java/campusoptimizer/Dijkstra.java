@@ -1,3 +1,5 @@
+package campusoptimizer;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -82,3 +84,4 @@ public class Dijkstra {
         return new Result(distances, predecessors);
     }
 }
+

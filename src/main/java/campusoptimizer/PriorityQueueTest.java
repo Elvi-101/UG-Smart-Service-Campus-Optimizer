@@ -1,3 +1,5 @@
+package campusoptimizer;
+
 public class PriorityQueueTest {
 
     public static void main(String[] args) {
@@ -28,7 +30,7 @@ public class PriorityQueueTest {
         pq.insert("Hostel", 1);
         pq.insert("Bank", 6);
 
-        String[] expectedOrder = {"Hostel", "Gym", "Bank", "Cafeteria", "Library"};
+        String[] expectedOrder = { "Hostel", "Gym", "Bank", "Cafeteria", "Library" };
         for (String expected : expectedOrder) {
             String actual = pq.extractMin();
             assertEquals(expected, actual, "extractMin() out of order");
@@ -37,7 +39,8 @@ public class PriorityQueueTest {
         System.out.println("testExtractRemovesInPriorityOrder passed");
     }
 
-    // Confirm empty queue is handled safely (isEmpty flag + exception on illegal extract)
+    // Confirm empty queue is handled safely (isEmpty flag + exception on illegal
+    // extract)
     private static void testEmptyQueueHandling() {
         PriorityQueue<String> pq = new PriorityQueue<>();
         assertTrue(pq.isEmpty(), "new queue should start empty");
