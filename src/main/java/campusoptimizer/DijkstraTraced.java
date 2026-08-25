@@ -1,3 +1,5 @@
+package campusoptimizer;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -45,7 +47,8 @@ public class DijkstraTraced {
             finalized.add(current);
 
             for (Graph.Edge edge : graph.getNeighbors(current)) {
-                if (finalized.contains(edge.destination)) continue;
+                if (finalized.contains(edge.destination))
+                    continue;
                 int newDist = distances.get(current) + edge.weight;
                 if (newDist < distances.get(edge.destination)) {
                     distances.put(edge.destination, newDist);
@@ -60,11 +63,13 @@ public class DijkstraTraced {
     }
 
     public static void printTraceTable(List<Step> trace) {
-        if (trace.isEmpty()) return;
+        if (trace.isEmpty())
+            return;
         List<String> vertices = new ArrayList<>(trace.get(trace.size() - 1).distanceSnapshot.keySet());
 
         StringBuilder header = new StringBuilder(String.format("%-5s %-16s", "Step", "Extracted"));
-        for (String v : vertices) header.append(String.format("%-16s", v));
+        for (String v : vertices)
+            header.append(String.format("%-16s", v));
         System.out.println(header);
 
         int step = 1;

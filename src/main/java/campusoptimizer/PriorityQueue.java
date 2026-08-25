@@ -1,3 +1,5 @@
+package campusoptimizer;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,9 +10,9 @@ import java.util.List;
  * unvisited location always comes out first.)
  *
  * Backed by an ArrayList used as a complete binary tree:
- *   - parent of index i        -> (i - 1) / 2
- *   - left child of index i    -> 2*i + 1
- *   - right child of index i   -> 2*i + 2
+ * - parent of index i -> (i - 1) / 2
+ * - left child of index i -> 2*i + 1
+ * - right child of index i -> 2*i + 2
  */
 public class PriorityQueue<T> {
 
@@ -42,8 +44,8 @@ public class PriorityQueue<T> {
     /** Insert / enqueue a new element with a given priority. O(log n) */
     public void insert(T element, int priority) {
         Entry entry = new Entry(element, priority);
-        heap.add(entry);              // add at the end (bottom-right of tree)
-        siftUp(heap.size() - 1);      // restore heap order by bubbling up
+        heap.add(entry); // add at the end (bottom-right of tree)
+        siftUp(heap.size() - 1); // restore heap order by bubbling up
     }
 
     /** Look at (without removing) the highest-priority element. O(1) */
@@ -68,8 +70,8 @@ public class PriorityQueue<T> {
         Entry last = heap.remove(heap.size() - 1);
 
         if (!heap.isEmpty()) {
-            heap.set(0, last);   // move last element to the root
-            siftDown(0);         // bubble it down to restore heap order
+            heap.set(0, last); // move last element to the root
+            siftDown(0); // bubble it down to restore heap order
         }
 
         return min.element;
