@@ -1,0 +1,9 @@
+Algorithm,Input Size,Execution Time (ns)
+QuickSort,100,2260600
+BinarySearch,100,1968800
+QuickSort,1000,1958400
+BinarySearch,1000,6400
+QuickSort,5000,2603100
+BinarySearch,5000,9900
+QuickSort,10000,14293500
+BinarySearch,10000,7500
